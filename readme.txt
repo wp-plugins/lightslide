@@ -116,7 +116,6 @@ Tested up to: 3.2.1
 
 * 在插件选项中添加勾选加载jQuery库的选项
 
-
 * 优化后台设置面板
 
 
@@ -127,14 +126,13 @@ Tested up to: 3.2.1
 
 * 修正后台设置面板中的小Bug
 
-
 * 优化jQuery代码，大大缩短代码量
 
 
 
 == Screenshots ==
 
-lightslide.png
+该插件的详细介绍以及预览图请到http://kayosite.com/the-plugin-lightslide.html
 
 
 
