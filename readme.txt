@@ -4,12 +4,12 @@ Donate link:
 Tags: light, slide, lightslide, images, photos, gallery, slideshow, jquery slideshow
 Requires at least: 3.0.4
 Tested up to: 3.2.1
-Version: 0.9
 
 为了实现一款简洁，轻量又不失功能的幻灯，特制这款 Wordpress 插件(A simple and light but useful slide)
 
 
-== Description ==
+== Description ==为了实现一款简洁，轻量又不失功能的幻灯，特制这款 Wordpress 插件(A simple and light but useful slide)
+
 
 默认用户交互效果
 
