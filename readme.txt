@@ -47,8 +47,7 @@ Version: 0.9
 
 2.在后台上传插件到插件目录并启用插件
 
-3.在需要调用幻灯的地方添加如下代码
-<?php if(function_exists('get_lightslide')) { get_lightslide(); } ?>
+3.在需要调用幻灯的地方添加调用代码（详见压缩包内的readme.txt）
 
 
 == Upgrade Notice ==
@@ -70,6 +69,6 @@ Version: 0.9
 
 == Frequently Asked Questions ==
 
-若调用<code><?php if(function_exists('get_lightslide')) { get_lightslide(); } ?></code>后无法看到效果，请检查是否已经加载jQuery库，如没有加载可以在插件后台中启用jQuery库。
+若添加调用代码无法看到插件效果，请检查是否已经加载jQuery库，如没有加载可以在插件后台中启用jQuery库。
 
-如果还有疑问，可以到我的博客插件发布页http://kayosite.com/the-plugin-lightslide.html留言
+如果还有疑问，可以参考压缩包内的readme.txt文件，也可以到我的博客插件发布页http://kayosite.com/the-plugin-lightslide.html留言
