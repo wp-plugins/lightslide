@@ -128,17 +128,16 @@ if($options_css['show_ls_jquery'] == 'true') { ?>
 <?php	} ?>
 <script type="text/javascript" src="<?php echo get_option('home'); ?>/wp-content/plugins/lightslide/js/lightslide.js"></script>
 <style type="text/css" media="screen">
-#slide {height: <?php echo $options_css['image_height']+2*$options_css['image_height'] ?>px; width: <?php echo $options_css['image_width']+2*$options_css['image_border'] ?>px; }
-#slideshow{position: relative; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; border: <?php echo $options_css['image_border'] ?>px solid <?php echo $options_css['border_color'] ?>;}
+#slide {height: <?php echo $options_css['image_height']+2*$options_css['image_border']+25 ?>px; width: <?php echo $options_css['image_width']+2*$options_css['image_border'] ?>px; }
+#slideshow {position: relative; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; border: <?php echo $options_css['image_border'] ?>px solid <?php echo $options_css['border_color'] ?>;}
 #slideshow .leftImg {display: block; position: absolute; top: 48%; left: 0; z-index: 11; } 
 #slideshow .rightImg {display: block; position: absolute; top: 48%; right: 0; z-index: 11; } 
-#slideshow div{position: absolute; top: 0; left: 0; z-index: 8; opacity: 0.0; height: <?php echo $options_css['image_height'] ?>px; overflow: hidden; background-color: #FFF;}
-#slideshow div img{height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px;}
-#slideshow div.current{z-index: 10;}
-#slideshow div.prev{z-index: 9;}
-#slideshow div img{display: block; border: 0; margin-bottom: 10px;}
-#slideshow div span{display: none; position: absolute; bottom: 0; left: 0; height: 50px; line-height: 50px; background: #000; color: #fff; width: 100%; }
-#slideshow div.current span{display: block; padding-left: 10px; font-size: 12pt; }
+#slideshow div {position: absolute; top: 0; left: 0; z-index: 8; opacity: 0.0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; overflow: hidden; background-color: #FFF;}
+#slideshow div.current {z-index: 10;}
+#slideshow div.prev {z-index: 9;}
+#slideshow div img {display: block; border: 0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; }
+#slideshow div span {display: none; position: absolute; bottom: 0; left: 0; height: 50px; line-height: 50px; background: #000; color: #fff; width: 100%; font-size: 12pt; }
+#slideshow div.current span {display: block; padding-left: 10px; }
 #slidenav {width: 100%; height: 25px; position: relative; }
 .slidenavcon {height: 100%; margin: 0 auto; position: absolute; top: 0; left: 48%; }
 #slidenav a {display: block; width: 10px; margin-right: 5px; font-size: 20pt; color: <?php echo $options_css['nav_color'] ?>; text-decoration: none; float: left; }
