@@ -26,7 +26,6 @@ function slideSwitch() {
 // 向左播放幻灯
 function slideSwitchleft(){
 	var $current = $("#slideshow div.current");
-	slidenavHighlight($next);rrent = $("#slideshow div.current");
 	if ( $current.length == 0 ) $current = $("#slideshow div:first");
 	var $next = ( $current.prev().attr("class") != "rightImg" ) ? $current.prev() : $("#slideshow div:last");
 	$current.addClass('prev');
