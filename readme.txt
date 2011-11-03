@@ -1,4 +1,4 @@
-=== Plugin Name ===
+﻿=== Plugin Name ===
 Contributors: Kayo
 Donate link: 
 Tags: light, slide, lightslide, images, photos, gallery, slideshow, jquery slideshow
@@ -70,6 +70,6 @@ Version: 0.9
 
 == Frequently Asked Questions ==
 
-若调用<?php if(function_exists('get_lightslide')) { get_lightslide(); } ?>后无法看到效果，请检查是否已经加载jQuery库，如没有加载可以在插件后台中启用jQuery库。
+若调用<code><?php if(function_exists('get_lightslide')) { get_lightslide(); } ?></code>后无法看到效果，请检查是否已经加载jQuery库，如没有加载可以在插件后台中启用jQuery库。
 
 如果还有疑问，可以到我的博客插件发布页http://kayosite.com/the-plugin-lightslide.html留言
