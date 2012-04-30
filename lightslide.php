@@ -34,10 +34,10 @@ $slsettings_defaults=array(
 'image_width'=>696,
 'image_height'=>241,
 'image_border'=>10,
-'border_color'=>'#DDDDDD',
-'nav_color'=>'#DDDDDD',
+'border_color'=>'#ddd',
+'nav_color'=>'#ddd',
 'image_number'=>3,
-'current_nav_color'=>'#999999',
+'current_nav_color'=>'#999',
 'show_nav'=>'true',
 'show_button'=>'true',
 'show_text'=>'true',
@@ -130,9 +130,9 @@ if($options_css['show_ls_jquery'] == 'true') { ?>
 <style type="text/css" media="screen">
 #slide {height: <?php echo $options_css['image_height']+2*$options_css['image_border']+25 ?>px; width: <?php echo $options_css['image_width']+2*$options_css['image_border'] ?>px; }
 #slideshow {position: relative; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; border: <?php echo $options_css['image_border'] ?>px solid <?php echo $options_css['border_color'] ?>;}
-#slideshow .leftImg {display: block; position: absolute; top: 48%; left: 0; z-index: 11; } 
-#slideshow .rightImg {display: block; position: absolute; top: 48%; right: 0; z-index: 11; } 
-#slideshow div {position: absolute; top: 0; left: 0; z-index: 8; opacity: 0.0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; overflow: hidden; background-color: #FFF;}
+#slideshow .leftImg {display: block; height: 34px; margin-top: -17px; position: absolute; top: 50%; left: 0; z-index: 11; }
+#slideshow .rightImg {display: block; height: 34px; margin-top: -17px; position: absolute; top: 50%; right: 0; z-index: 11; }
+#slideshow div {position: absolute; top: 0; left: 0; z-index: 8; opacity: 0.0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; overflow: hidden; background-color: #fff;}
 #slideshow div.current {z-index: 10;}
 #slideshow div.prev {z-index: 9;}
 #slideshow div img {display: block; border: 0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; }
