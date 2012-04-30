@@ -3,7 +3,7 @@
 Plugin Name: Lightslide
 Plugin URI: http://kayosite.com/the-plugin-lightslide.html
 Description: 为了实现一款简洁，轻量又不失功能的幻灯，特制这款 Wordpress 插件
-Version: 0.9
+Version: 1.0
 Author: Kayo
 Author URI: http://kayosite.com
 */
@@ -84,7 +84,7 @@ function wp_lightslide_options(){
 			<input type="hidden" name="update_lightslide_options" value="true" />
 			<p><?php _e("幻灯宽度", 'get_lightslide'); ?>:<input type="text" name="wpls_options[image_width]" value="<?php echo $options['image_width'] ?>" size="3" />px&nbsp;&nbsp;<?php _e("幻灯高度", 'get_lightslide'); ?>:<input type="text" name="wpls_options[image_height]" value="<?php echo $options['image_height'] ?>" size="3" />px</p>
 			<p><?php _e("边框大小", 'get_lightslide'); ?>:<input type="text" name="wpls_options[image_border]" value="<?php echo $options['image_border'] ?>" size="3" />px&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("边框颜色", 'get_lightslide'); ?>:<input type="text" name="wpls_options[border_color]" value="<?php echo $options['border_color'] ?>" size="9" />E:#DDD</p>
-			<p><?php _e("导航颜色", 'get_lightslide'); ?>:<input type="text" name="wpls_options[nav_color]" value="<?php echo $options['nav_color'] ?>" size="9" />px&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("图片数量", 'get_lightslide'); ?>:<input type="text" name="wpls_options[image_number]" value="<?php echo $options['image_number'] ?>" size="3" />px</p>
+			<p><?php _e("导航颜色", 'get_lightslide'); ?>:<input type="text" name="wpls_options[nav_color]" value="<?php echo $options['nav_color'] ?>" size="9" />&nbsp;&nbsp;&nbsp;&nbsp;<?php _e("图片数量", 'get_lightslide'); ?>:<input type="text" name="wpls_options[image_number]" value="<?php echo $options['image_number'] ?>" size="3" /></p>
 			<p><?php _e("当前导航颜色", 'get_lightslide'); ?>:<input type="text" name="wpls_options[current_nav_color]" value="<?php echo $options['current_nav_color'] ?>" size="9" />&nbsp;&nbsp;<?php _e("是否显示导航", 'get_lightslide'); ?>?&nbsp;<select name="wpls_options[show_nav]"><option value="true" <?php selected('true', $options['show_nav']); ?>>显示</option><option value="false" <?php selected('false', $options['show_nav']); ?>>不显示</option></select></p>
 			<p><?php _e("是否显示下（上）一张按钮", 'get_lightslide'); ?>?&nbsp;<select name="wpls_options[show_button]"><option value="true" <?php selected('true', $options['show_button']); ?>>显示</option><option value="false" <?php selected('false', $options['show_button']); ?>>不显示</option></select>&nbsp;<?php _e("是否显示配图文字", 'get_lightslide'); ?>?&nbsp;<select name="wpls_options[show_text]"><option value="true" <?php selected('true', $options['show_text']); ?>>显示</option><option value="false" <?php selected('false', $options['show_text']); ?>>不显示</option></select></p>
 			<p><?php _e("是否加载jQuery库", 'get_lightslide'); ?>?&nbsp;<select name="wpls_options[show_ls_jquery]"><option value="true" <?php selected('true', $options['show_ls_jquery']); ?>>加载</option><option value="false" <?php selected('false', $options['show_ls_jquery']); ?>>不加载</option></select>&nbsp;</p>
@@ -124,7 +124,7 @@ add_action('wp_head', 'wpls_lightslide_header');
 function wpls_lightslide_header() { 
 $options_css = get_option('wpls_options');
 if($options_css['show_ls_jquery'] == 'true') { ?>
-   <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.3.2/jquery.min.js"></script>
+   <script type="text/javascript" src="<?php echo get_option('home'); ?>/wp-content/plugins/lightslide/js/jquery.min.js"></script>
 <?php	} ?>
 <script type="text/javascript" src="<?php echo get_option('home'); ?>/wp-content/plugins/lightslide/js/lightslide.js"></script>
 <style type="text/css" media="screen">
@@ -138,10 +138,10 @@ if($options_css['show_ls_jquery'] == 'true') { ?>
 #slideshow div img {display: block; border: 0; height: <?php echo $options_css['image_height'] ?>px; width: <?php echo $options_css['image_width'] ?>px; }
 #slideshow div span {display: none; position: absolute; bottom: 0; left: 0; height: 50px; line-height: 50px; background: #000; color: #fff; width: 100%; font-size: 12pt; }
 #slideshow div.current span {display: block; padding-left: 10px; }
-#slidenav {width: 100%; height: 25px; position: relative; }
-.slidenavcon {height: 100%; margin: 0 auto; position: absolute; top: 0; left: 48%; }
-#slidenav a {display: block; width: 10px; margin-right: 5px; font-size: 20pt; color: <?php echo $options_css['nav_color'] ?>; text-decoration: none; float: left; }
-.cur span {color: <?php echo $options_css['current_nav_color'] ?>; }
+#slidenav {width: 100%; height: 25px; text-align: center; }
+.slidenavcon {height: 100%; margin: 0 auto; }
+#slidenav span {float: left; display: block; width: 10px; margin-right: 5px; font-size: 20pt; color: <?php echo $options_css['nav_color'] ?>; text-decoration: none; cursor: pointer; }
+#slidenav .cur {color: <?php echo $options_css['current_nav_color'] ?>; }
 </style>
 <?php	}
 

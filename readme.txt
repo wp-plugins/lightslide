@@ -1,14 +1,14 @@
-﻿=== Plugin Name ===
+=== Plugin Name ===
 
 Contributors: Kayo
 
-Donate link: 
+Donate link:
 
 Tags: light, slide, lightslide, images, photos, gallery, slideshow, jquery slideshow
 
 Requires at least: 3.0.4
 
-Tested up to: 3.2.1
+Tested up to: 3.3.2
 
 
 
@@ -75,7 +75,7 @@ Tested up to: 3.2.1
 
 
 
-8.是否加载jQuery库
+8.是否加载 jQuery 库
 
 
 
@@ -85,7 +85,7 @@ Tested up to: 3.2.1
 
 
 
-1.下载Lightslide插件
+1.下载 Lightslide 插件
 
 
 
@@ -93,7 +93,7 @@ Tested up to: 3.2.1
 
 
 
-3.在需要调用幻灯的地方添加调用代码（详见压缩包内的readme.txt）
+3.在需要调用幻灯的地方添加调用代码（详见压缩包内的 readme.txt ）
 
 
 
@@ -111,30 +111,38 @@ Tested up to: 3.2.1
 
 == Changelog ==
 
+= 1.0 =
+
+
+* 修复导航不能正确居中的 Bug
+
+* 优化插件结构
+
+* 插件包中包含 jQuery 库，不再利用 SAE 的 jQuery 文档
+
+* 更出色的浏览器兼容性
 
 
 = 0.9 =
 
 
-* 在插件选项中添加勾选加载jQuery库的选项
+* 在插件选项中添加勾选加载 jQuery 库的选项
 
 * 优化后台设置面板
-
 
 
 = 0.8 =
 
 
+* 修正后台设置面板中的 Bug
 
-* 修正后台设置面板中的小Bug
-
-* 优化jQuery代码，大大缩短代码量
+* 优化 jQuery 代码，大大缩短代码量
 
 
 
 == Screenshots ==
 
-该插件的详细介绍以及预览图请到http://kayosite.com/the-plugin-lightslide.html
+该插件的详细介绍以及预览图请到 http://kayosite.com/the-plugin-lightslide.html
 
 
 
@@ -143,6 +151,6 @@ Tested up to: 3.2.1
 
 
 
-若添加调用代码无法看到插件效果，请检查是否已经加载jQuery库，如没有加载可以在插件后台中启用jQuery库。
+若添加调用代码无法看到插件效果，请检查是否已经加载 jQuery 库，如没有加载可以在插件后台中启用 jQuery 库。
 
-如果还有疑问，可以到我的博客插件发布页http://kayosite.com/the-plugin-lightslide.html留言
+如果还有疑问，可以到我的博客插件发布页 http://kayosite.com/the-plugin-lightslide.html 留言
